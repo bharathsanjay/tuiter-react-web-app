@@ -2,7 +2,7 @@ import React from 'react';
 import { FaComment, FaRetweet, FaHeart, FaShare } from 'react-icons/fa';
 import { FiUpload } from 'react-icons/fi';
 const TuitStats = ({ replies, retuits, likes, isLiked }) => (
-  <div className="row g-5">
+  <div className="row">
     <div className="col ">
       <FaComment className="me-2" />
       {replies}
@@ -16,7 +16,7 @@ const TuitStats = ({ replies, retuits, likes, isLiked }) => (
       {likes}
     </div>
     <div className="col">
-      <FiUpload />
+      <FiUpload className="me-2" />
     </div>
   </div>
 );
