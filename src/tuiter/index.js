@@ -1,7 +1,7 @@
 import Nav from "../nav";
 import {Route, Routes} from "react-router-dom"
 import NavigationSidebar from "./navigation-sidebar";
-import HomeScreen from "./home-screen";
+import HomeScreen from "./Home-screen/home-screen";
 import ExploreScreen from "./explore-screen/index";
 
 import BookmarksScreen from "./bookmarks-screen";
@@ -10,8 +10,18 @@ import WhoToFollowListItem
   from "./who-to-follow-list/who-to-follow-list-item";
 import WhoToFollowList from "./who-to-follow-list";
 import TuitSummaryList from "./tuiter-summary-list";
+import whoReducer from "./reducers/who-reducer";
+import { configureStore } from '@reduxjs/toolkit';
+import tuitsReducer from "./reducers/tuits-reducer";
+import {Provider} from "react-redux";
+const store = configureStore(
+  {reducer: {who: whoReducer, tuits: tuitsReducer}});
+
+
 function Tuiter() {
  return (
+ 
+<Provider store={store}>
   <div>
   <Nav />
   <div className="row">
@@ -34,6 +44,7 @@ function Tuiter() {
     
   </div>
 </div>
+</Provider>
 
  )
 }
