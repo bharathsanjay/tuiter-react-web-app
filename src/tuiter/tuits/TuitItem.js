@@ -34,11 +34,11 @@ const deleteTuitHandler = (id) => {
 
 
    <div className="row">
-   <div className="col-1">
+   <div className="col-2">
        <img width={50} className=" rounded-5" src= {`${process.env.PUBLIC_URL}/images/${tuit.image}`}/>
      </div>
      
-     <div className="col-11">
+     <div className="col-10">
      <button className=" btn btn-close float-end "
             onClick={() => deleteTuitHandler(tuit._id)}></button>
 

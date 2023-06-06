@@ -47,8 +47,6 @@ const WhatsHappening = () => {
            <BsEmojiSmile className="me-3" />
            <TbCalendarStats className="me-3"/>
            <HiOutlineLocationMarker className="me-3" />
-           <BiBold className="me-3"/>
-           <BiItalic className="me-3" />
          </div>
        </div>
      </div>
