@@ -15,6 +15,7 @@ export const findTuits = async () => {
 export const deleteTuit = async (tid) => {
     const response = await axios.delete(`${TUITS_API}/${tid}`)
     return response.data
+    
   }
 
   export const createTuit = async (tuit) => {
